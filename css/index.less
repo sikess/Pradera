@@ -1,0 +1,146 @@
+// Salamander Studio, C.A.
+// www.salamanderstudio.com.ve
+/*
+*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+// VARIABLES
+@div_100por100:100%;
+@gris: #D6D6D3;
+
+// FIN VARIABLES
+
+// MIXIN
+.bg_gral(@url,@repeat){
+	background-image: url(@url);
+	background-repeat: @repeat;
+}
+
+[class*="foundicon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+ 
+[class*="foundicon-"]:before {
+  font-family: "[set]Foundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+.div_para_fondos{
+	width: @div_100por100;
+}
+
+.paddin_gral{
+	padding: 5px;
+}
+
+.listas{
+	ul{
+		padding: 0;
+	}
+
+	ul li{
+		list-style-type: none;
+		display: inline;
+		padding: 0 10px 0 10px;		
+	}
+}
+
+.formato_div(@anch,@alt,@pad,@marg){
+	width: @anch;
+	height: @alt;
+	padding: @pad;
+	margin: @marg;
+
+}
+
+.reset{
+	margin: 0;
+	padding: 0;
+}
+
+// FIN MIXIN
+.formato_head{
+	.formato_div(100%,188px,"","");
+	background-color: @gris;
+}
+
+.formato_menu{
+	margin: 20px 0 0 0;
+
+}
+
+.formato_cenefa{
+	.formato_div(100%,30px,"","");
+	background-color: blue;
+	.reset
+}
+
+.formato_slide{
+	.formato_div(100%,300px,"","");
+	background-color: @gris;
+	.reset
+}
+
+.formato_medio{
+	.formato_div(100%,330px,"","");
+	background-color: blue;
+	.reset
+}
+
+.separador_azul{
+	.formato_div(100%,60px,"","");
+	background-color: @gris;
+	.reset
+}
+
+.formato_enlaces{
+	.formato_div(100%,230px,"","");
+	background-color: blue;
+	.reset
+}
+
+.separador_azul2{
+	.formato_div(100%,30px,"","");
+	background-color: @gris;
+	.reset
+}
+
+.pre_footer{
+	.formato_div(100%,505px,"","");
+	background-color: blue;
+	.reset
+}
+
+.footer{
+	.formato_div(100%,216px,"","");
+	background-color: @gris;
+	.reset;
+}
+
+.secciones_footer{
+	.formato_div("",216px,"","");
+	.reset;
+}
