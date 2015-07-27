@@ -25,6 +25,19 @@ input,select{vertical-align:middle}
 // FIN VARIABLES
 
 // MIXIN
+.degradado{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9c9ff+0,546aa7+100 */
+background: #a9c9ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #a9c9ff 0%, #546aa7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9c9ff), color-stop(100%,#546aa7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #a9c9ff 0%,#546aa7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #a9c9ff 0%,#546aa7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #a9c9ff 0%,#546aa7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #a9c9ff 0%,#546aa7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', endColorstr='#546aa7',GradientType=0 ); /* IE6-9 */
+
+}
+
 .bg_gral(@url,@repeat){
 	background-image: url(@url);
 	background-repeat: @repeat;
@@ -82,9 +95,16 @@ input,select{vertical-align:middle}
 }
 
 // FIN MIXIN
+
+.formato_top{
+	.degradado;
+	color: #FFF;
+}
+
 .formato_head{
 	.formato_div(100%,188px,"","");
-	background-color: @gris;
+	.bg_gral("../img/fondo_head_02_03.jpg", no-repeat);
+	// background-repeat: 
 }
 
 .formato_menu{
