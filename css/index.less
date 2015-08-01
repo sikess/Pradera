@@ -20,11 +20,19 @@ input,select{vertical-align:middle}
 
 // VARIABLES
 @div_100por100:100%;
+@grisclaro:#EDEDED;
 @gris: #D6D6D3;
+@grisplomo:#515151;
+@azulito:#5177B6;
 
 // FIN VARIABLES
 
 // MIXIN
+
+.centrar_div{
+	margin: 0 auto;
+}
+
 .degradado{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9c9ff+0,546aa7+100 */
 background: #a9c9ff; /* Old browsers */
@@ -72,6 +80,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', end
 .listas{
 	ul{
 		padding: 0;
+		margin: 0;
 	}
 
 	ul li{
@@ -94,7 +103,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', end
 	padding: 0;
 }
 
+.a_hover_und_line(@color_link,@bg_hover,@color_link_fondo,@font_weight,@text_deco,@padding_link,@font_size) {
+	a:hover{
+		text-decoration: @text_deco;
+		background-color: @color_link_fondo;
+		color: @bg_hover;
+}
+
+	a{
+		text-decoration:none;
+		color:@color_link;
+		font-weight:@font_weight;
+		padding: @padding_link;
+		font-size: @font_size;
+	}
+}
+
+.radios( @r1, @r2, @r3, @r4){
+	-moz-border-radius: @r1 @r2 @r3 @r4;
+    -webkit-border-radius: @r1 @r2 @r3 @r4;
+	border-radius: @r1 @r2 @r3 @r4;
+}
+
+.el_radio(@r1: 5px){
+	-moz-border-radius: @r1 @r1 @r1 @r1;
+    -webkit-border-radius: @r1 @r1 @r1 @r1;
+	border-radius: @r1 @r1 @r1 @r1;
+}
+
+.tm_icon(@size){
+	font-size: @size;
+}
 // FIN MIXIN
+
+
+
+.formato_logo{
+	padding: 10px 0 0 30px;
+}
 
 .formato_top{
 	.degradado;
@@ -107,9 +153,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', end
 	// background-repeat: 
 }
 
-.formato_menu{
+.formato_menu_top{
 	margin: 20px 0 0 0;
 
+}
+
+.formato_menu_top a{
+	.el_radio;
+	color: #FFF;
+	padding: 5px;
+	border-bottom: 4px solid #949394;
+	background-color: @azulito;
+}
+
+.formato_menu_top a:hover{
+	color: #FFF;
+	padding: 5px;
+	border-bottom: 5px solid #4C4C4C;
 }
 
 .formato_cenefa{
@@ -124,43 +184,112 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', end
 	.reset
 }
 
+
+// SLIDER
+.orbit-caption{
+	width: 300px !important;
+	margin: 60px 0 30px 60px;
+	border-top: 5px solid @azulito;
+}
+
+.orbit-bullets .active{
+	list-style-type: none;
+	width: 15px;
+	height:15px;
+	background-image: url("../img/bot_nav_activo.png")!important;
+	background-size:15px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+// FIN SLIDER
+
+
+// MEDIO
 .formato_medio{
 	.formato_div(100%,330px,"","");
-	background-color: blue;
-	.reset
+	background-color: @grisclaro;
+	// .reset
+	padding: 40px;
+}
+
+.formato_welcome_conte{
+	background-color: #FFF;
+}
+
+.formato_welcome{
+	padding: 20px;
+	text-align: justify;
+}
+
+.titulos{
+	color: @azulito;
+	font-weight: bold;
 }
 
 .separador_azul{
-	.formato_div(100%,60px,"","");
-	background-color: @gris;
-	.reset
+	.formato_div(100%,66px,"","");
+	background-color: @grisclaro;
+	.reset;
+	.bg_gral("../img/sep_07.png",no-repeat);
 }
 
-.formato_enlaces{
-	.formato_div(100%,230px,"","");
-	background-color: blue;
-	.reset
+.formato_enlaces_conte{
+	.formato_div(100%,auto,"","");
+	background-color: @grisclaro;
+	padding: 30px;	
+}
+
+// FIN MEDIO
+
+.formato_seccion_titulo{
+	background-color: @grisplomo;
+	padding: 10px;
+	color: #FFF;
+	font-weight: bold;
+	border-bottom: 5px solid @azulito;
+}
+
+.formato_seccion_foto{
+	background-color: @gris;
+	padding: 10px;
+	text-align: center;
+	
 }
 
 .separador_azul2{
 	.formato_div(100%,30px,"","");
-	background-color: @gris;
-	.reset
+	.degradado;
+	border-top: 3px solid @azulito;
+	.reset;	
 }
 
 .pre_footer{
-	.formato_div(100%,505px,"","");
-	background-color: blue;
+	.formato_div(100%,502px,"","");
+	.bg_gral("../img/bg_big_20.png",no-repeat);
 	.reset
 }
 
-.footer{
+.formato_footer{
 	.formato_div(100%,216px,"","");
-	background-color: @gris;
+	.bg_gral("../img/bg_footer_21.jpg",no-repeat);
 	.reset;
+	border-top: 5px solid @grisplomo;
 }
 
 .secciones_footer{
-	.formato_div("",216px,"","");
+	.formato_div("",210px,"","");
 	.reset;
 }
+
+.formato_icon{
+	.tm_icon(26px);
+}
+
+.formato_redes a{
+	.radios(90px,90px,90px,90px);
+	color:#FFF !important;
+	// padding: 5px;
+
+} 
+
