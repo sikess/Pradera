@@ -33,6 +33,10 @@ input,select{vertical-align:middle}
 	margin: 0 auto;
 }
 
+.texto_blanco{
+	color: #FFF !important;
+}
+
 .degradado{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9c9ff+0,546aa7+100 */
 background: #a9c9ff; /* Old browsers */
@@ -75,6 +79,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', end
 
 .paddin_gral{
 	padding: 5px;
+}
+
+.paddin_top_15{
+	padding-top: 15px;
 }
 
 .listas{
@@ -267,7 +275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', end
 .pre_footer{
 	.formato_div(100%,502px,"","");
 	.bg_gral("../img/bg_big_20.png",no-repeat);
-	.reset
+	padding: 30px;
 }
 
 .formato_footer{
@@ -276,15 +284,46 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c9ff', end
 	.reset;
 	border-top: 10px solid @grisplomo;
 	padding: 25px 10px 10px 10px;
+	.texto_blanco;
+}
+
+.formato_lista_seccion_footer{
+	li{
+		padding: 5px;
+		margin-left: 20px;
+		border-top: 2px groove #364D77;
+		// padding: 25px 10px 10px 10px;
+	}
+	a{
+		color: #FFF;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	i{
+		padding-right: 10px;
+	}
+}
+
+.tecto_centrado{
+	text-align: center;
+}
+
+.lineas{
+	border-bottom: 2px groove #364D77; 
 }
 
 .secciones_footer{
 	.formato_div("",210px,"","");
-	.reset;
+	padding: 30px;
 }
 
 .formato_icon{
 	.tm_icon(26px);
+}
+
+.formato_icon_footer{
+	.tm_icon(46px);
 }
 
 .formato_redes a{

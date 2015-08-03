@@ -152,6 +152,9 @@ select {
 .centrar_div {
   margin: 0 auto;
 }
+.texto_blanco {
+  color: #FFF !important;
+}
 .degradado {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9c9ff+0,546aa7+100 */
 
@@ -201,6 +204,9 @@ select {
 }
 .paddin_gral {
   padding: 5px;
+}
+.paddin_top_15 {
+  padding-top: 15px;
 }
 .listas ul {
   padding: 0;
@@ -396,8 +402,7 @@ select {
   margin: "";
   background-image: url("../img/bg_big_20.png");
   background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
+  padding: 30px;
 }
 .formato_footer {
   width: 100%;
@@ -410,17 +415,40 @@ select {
   padding: 0;
   border-top: 10px solid #515151;
   padding: 25px 10px 10px 10px;
+  color: #FFF !important;
+}
+.formato_lista_seccion_footer li {
+  padding: 5px;
+  margin-left: 20px;
+  border-top: 2px groove #364D77;
+}
+.formato_lista_seccion_footer a {
+  color: #FFF;
+}
+.formato_lista_seccion_footer a:hover {
+  text-decoration: underline;
+}
+.formato_lista_seccion_footer i {
+  padding-right: 10px;
+}
+.tecto_centrado {
+  text-align: center;
+}
+.lineas {
+  border-bottom: 2px groove #364D77;
 }
 .secciones_footer {
   width: "";
   height: 210px;
   padding: "";
   margin: "";
-  margin: 0;
-  padding: 0;
+  padding: 30px;
 }
 .formato_icon {
   font-size: 26px;
+}
+.formato_icon_footer {
+  font-size: 46px;
 }
 .formato_redes a {
   -moz-border-radius: 90px 90px 90px 90px;
